@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.schoolprojectjava.AdminViewUsersController">
+   <children>
+      <Label layoutX="324.0" layoutY="42.0" text="View All Users">
+         <font>
+            <Font name="Gill Sans" size="36.0" />
+         </font></Label>
+      <TableView fx:id="allUsersTable" layoutX="82.0" layoutY="142.0" prefHeight="288.0" prefWidth="719.0">
+        <columns>
+          <TableColumn fx:id="col_name" prefWidth="134.0" style="-fx-alignment: center;" text="Full Name" />
+          <TableColumn fx:id="col_mail" prefWidth="174.0" style="-fx-alignment: center;" text="Mail Address" />
+            <TableColumn fx:id="col_phone" minWidth="0.0" prefWidth="152.0" style="-fx-alignment: center;" text="Phone No" />
+            <TableColumn fx:id="col_age" minWidth="0.0" prefWidth="121.0" style="-fx-alignment: center;" text="Age" />
+            <TableColumn fx:id="col_gender" minWidth="0.0" prefWidth="137.0" style="-fx-alignment: center;" text="Gender" />
+        </columns>
+      </TableView>
+      <Button fx:id="showUsersBtn" layoutX="342.0" layoutY="460.0" mnemonicParsing="false" onAction="#showUsers" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #6753dd;" text="Display Users" textFill="WHITE" />
+      <Button fx:id="backBtn" layoutX="342.0" layoutY="509.0" mnemonicParsing="false" onAction="#goToAdminHome" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #f061c0;" text="Back" textFill="WHITE" />
+   </children>
+</AnchorPane>

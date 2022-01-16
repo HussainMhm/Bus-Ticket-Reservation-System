@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.schoolprojectjava.AdminAddBusesController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="23.0" prefHeight="29.0" prefWidth="850.0" text="ADD BUS" textAlignment="CENTER">
+         <font>
+            <Font name="Gill Sans" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="busId" alignment="CENTER" layoutX="112.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" promptText="Bus ID" style="-fx-background-radius: 10;" />
+      <TextField fx:id="busSource" alignment="CENTER" layoutX="437.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" promptText="From Where" style="-fx-background-radius: 10;" />
+      <TextField fx:id="busDestination" alignment="CENTER" layoutX="602.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" promptText="To Where" style="-fx-background-radius: 10;" />
+      <TextField fx:id="busTicketPrice" alignment="CENTER" layoutX="437.0" layoutY="136.0" prefHeight="30.0" prefWidth="150.0" promptText="Ticket Price" style="-fx-background-radius: 10;" />
+      <TextField fx:id="busDepartTime" alignment="CENTER" layoutX="112.0" layoutY="136.0" prefHeight="30.0" prefWidth="150.0" promptText="Depart Time (14:00)" style="-fx-background-radius: 10;" />
+      <TextField fx:id="busArrivalTime" alignment="CENTER" layoutX="274.0" layoutY="136.0" prefHeight="30.0" prefWidth="150.0" promptText="Arrival Time (18:00)" style="-fx-background-radius: 10;" />
+      <TextField fx:id="busTotalSeats" alignment="CENTER" layoutX="602.0" layoutY="136.0" prefHeight="30.0" prefWidth="150.0" promptText="Number of Seats" style="-fx-background-radius: 10;" />
+      <DatePicker fx:id="busDate" layoutX="274.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" promptText="Journey Date" style="-fx-background-radius: 10;" />
+      <Button fx:id="addBusBtn" layoutX="275.0" layoutY="191.0" mnemonicParsing="false" onAction="#addBus" prefHeight="27.0" prefWidth="312.0" style="-fx-background-color: #6753dd#6753dd; -fx-background-radius: 10;" text="Add Bus" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="back" layoutX="320.0" layoutY="510.0" mnemonicParsing="false" onAction="#goToAdminHome" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #f061c0#f061c0;" text="Back" textFill="WHITE" />
+      <TableView fx:id="busesTable" layoutX="47.0" layoutY="253.0" prefHeight="247.0" prefWidth="779.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="57.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="Bus ID" />
+          <TableColumn fx:id="col_from" prefWidth="101.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="From" />
+            <TableColumn fx:id="col_to" prefWidth="98.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="To" />
+            <TableColumn fx:id="col_depart" prefWidth="71.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="Depart" />
+            <TableColumn fx:id="col_arrival" prefWidth="75.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="Arrival" />
+            <TableColumn fx:id="col_total_seats" prefWidth="79.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="Total Seats" />
+            <TableColumn fx:id="col_available_seats" prefWidth="92.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="Available Seats" />
+            <TableColumn fx:id="col_price" prefWidth="78.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="Price (TL)" />
+            <TableColumn fx:id="col_date" prefWidth="127.0" style="-fx-alignment: center; -fx-background-color-fx-background-color: black;" text="Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="showBusesBtn" layoutX="430.0" layoutY="510.0" mnemonicParsing="false" onAction="#showBuses" prefWidth="100.0" style="-fx-background-color: #6753dd#6753dd;" text="Show Buses" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.schoolprojectjava.AdminVewBookingsController">
+   <children>
+      <Label layoutX="293.0" layoutY="43.0" text="View All Bookings">
+         <font>
+            <Font name="Gill Sans" size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="bookingsTable" layoutX="29.0" layoutY="128.0" prefHeight="258.0" prefWidth="797.0">
+        <columns>
+          <TableColumn fx:id="col_bus_id" prefWidth="59.0" style="-fx-alignment: center;" text="Bus ID" />
+          <TableColumn fx:id="col_name" prefWidth="112.0" style="-fx-alignment: center;" text="Name" />
+            <TableColumn fx:id="col_phone" prefWidth="90.0" style="-fx-alignment: center;" text="Phone" />
+            <TableColumn fx:id="col_from" prefWidth="96.0" style="-fx-alignment: center;" text="From" />
+            <TableColumn fx:id="col_to" prefWidth="91.0" style="-fx-alignment: center;" text="To" />
+            <TableColumn fx:id="col_depart" prefWidth="95.0" style="-fx-alignment: center;" text="Depart" />
+            <TableColumn fx:id="col_arrive" prefWidth="88.0" style="-fx-alignment: center;" text="Arrive" />
+            <TableColumn fx:id="col_tickets" prefWidth="74.0" style="-fx-alignment: center;" text="Tickets" />
+            <TableColumn fx:id="col_date" prefWidth="91.0" style="-fx-alignment: center;" text="Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="showBookingsBtn" layoutX="328.0" layoutY="417.0" mnemonicParsing="false" onAction="#showBookings" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #6753dd#6753dd;" text="Show All Bookings" textFill="WHITE" />
+      <Button fx:id="backBtn" layoutX="328.0" layoutY="459.0" mnemonicParsing="false" onAction="#goToAdminHome" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #f061c0;" text="Back" textFill="WHITE" />
+   </children>
+</AnchorPane>

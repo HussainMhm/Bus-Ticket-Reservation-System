@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.schoolprojectjava.PassengerLoginController">
+   <children>
+      <TextField fx:id="mailField" alignment="CENTER" layoutX="192.0" layoutY="167.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #6753dd; -fx-border-width: 1; -fx-border-radius: 10;" />
+      <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="192.0" layoutY="226.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #6753dd; -fx-border-width: 1; -fx-border-radius: 10;" />
+      <Button fx:id="loginBtn" layoutX="191.0" layoutY="282.0" mnemonicParsing="false" onAction="#passengerLogin" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #6753dd;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans" size="14.0" />
+         </font></Button>
+      <Button fx:id="signupBtn" layoutX="300.0" layoutY="323.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goToSignUp" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #f061c0;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans" size="14.0" />
+         </font></Button>
+      <Label layoutX="264.0" layoutY="145.0" text="Username">
+         <font>
+            <Font name="Gill Sans" size="14.0" />
+         </font></Label>
+      <Label layoutX="265.0" layoutY="203.0" text="Password">
+         <font>
+            <Font name="Gill Sans" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="-133.0" layoutY="50.0" prefHeight="29.0" prefWidth="850.0" text="LOGIN PAGE" textAlignment="CENTER">
+         <font>
+            <Font name="Gill Sans" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="adminLoginBtn" layoutX="193.0" layoutY="323.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goToAdminLogin" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #f061c0;" text="Admin Login" textFill="WHITE">
+         <font>
+            <Font name="Gill Sans" size="14.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
