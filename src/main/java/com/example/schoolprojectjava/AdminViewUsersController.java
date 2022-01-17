@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -30,6 +31,8 @@ public class AdminViewUsersController implements Initializable {
     private Button backBtn;
     @FXML
     private Button showUsersBtn;
+    @FXML
+    private Button deleteBtn;
 
     @FXML
     private TableView<User> allUsersTable;
@@ -87,6 +90,30 @@ public class AdminViewUsersController implements Initializable {
         col_phone.setCellValueFactory(new PropertyValueFactory<>("phone"));
         col_age.setCellValueFactory(new PropertyValueFactory<>("age"));
         col_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+    }
+
+    @FXML
+    private void deleteUser(){
+        User user = allUsersTable.getSelectionModel().getSelectedItem();
+        if (user==null) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Didn't choose a user!");
+            alert.showAndWait();
+        }
+        else {
+            query = "DELETE FROM UserAccounts WHERE email = '" + user.getMail() + "';";
+            try {
+                preparedStatement = connection.prepareStatement(query);
+                preparedStatement.executeUpdate();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setContentText("User successfully deleted!");
+                alert.showAndWait();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
