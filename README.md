@@ -35,14 +35,14 @@ Welcome to the **Bus Ticket Reservation System** project! This project is implem
   - Open the `src/main/resources/application.properties` file.
   - Update the database URL, username, and password.
 
-**Run the application:**
+## Run the application:
 
 - Run the `Main` class to start the application.
 
-**Screenshots**
+## Screenshots
 
 Application's interface.
 
-**Contributing**
+## Contributing
 
 Contributions are welcome! If you find any issues or want to enhance the project, feel free to open an issue or submit a pull request.
